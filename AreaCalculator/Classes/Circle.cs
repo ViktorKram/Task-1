@@ -32,10 +32,7 @@ namespace AreaCalculator.Classes
         // Объявим открытое свойство для получения значения радиуса круга. 
         public double Radius
         {
-            get
-            {
-                return _radius;
-            }
+            get { return _radius; }
         }
         #endregion
 

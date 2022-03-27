@@ -11,7 +11,9 @@ namespace AreaCalculator.Interfaces
     /// </summary>
     interface IShape
     {
+        #region Methods
         // Объявим метод для определения площади фигуры.
         double CalculateArea();
+        #endregion
     }
 }

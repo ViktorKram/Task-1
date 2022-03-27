@@ -51,7 +51,7 @@ namespace AreaCalculatorTests
         }
 
         [Fact]
-        void TriangleCreation_WhenTriangleWithSideValuesCannotExist_ShouldThrowArgumentOutOfRangeException()
+        void TriangleCreation_WhenTriangleWithTheseSideValuesCannotExist_ShouldThrowArgumentOutOfRangeException()
         {
             // Act
             Action act = () => new Triangle(10, 3, 2);
