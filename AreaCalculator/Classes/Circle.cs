@@ -18,7 +18,7 @@ namespace AreaCalculator.Classes
         public Circle(double radius)
         {
             if (radius <= 0)
-                throw new ArgumentOutOfRangeException("Radius", "Radius must be over 0.");
+                throw new ArgumentOutOfRangeException("Radius", "Radius equals or less than 0.");
             else if (Double.IsPositiveInfinity(radius))
                 throw new ArgumentException("Radius is positive infinity.");
             else if (Double.IsNaN(radius))
@@ -30,22 +30,16 @@ namespace AreaCalculator.Classes
 
         #region Properties
         // Объявим открытое свойство для получения значения радиуса круга. 
-        public double Radius
-        {
-            get { return _radius; }
-        }
+        public double Radius => _radius;
         #endregion
 
         #region Methods
         // Реализуем метод CalculateArea, унаследованный от интерфейса IShape.
         /// <summary>
-        /// Calculate the shape's area.
+        /// Returns a circle's area calculated by radius.
         /// </summary>
-        /// <returns>The Circle area.</returns>
-        public double CalculateArea()
-        {
-            return _radius * _radius * Math.PI;
-        }
+        /// <returns>The number calculated by special math formula.</returns>
+        public double CalculateArea() => Math.Pow(_radius, 2) * Math.PI;
         #endregion
     }
 }

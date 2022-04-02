@@ -36,7 +36,7 @@ namespace AreaCalculatorTests
             ArgumentOutOfRangeException exception = Assert.Throws<ArgumentOutOfRangeException>(act);
 
             // Assert
-            Assert.Equal("Radius must be over 0. (Parameter 'Radius')", exception.Message);
+            Assert.Equal("Radius equals or less than 0. (Parameter 'Radius')", exception.Message);
         }
 
         [Fact]
@@ -47,11 +47,11 @@ namespace AreaCalculatorTests
             ArgumentOutOfRangeException exception = Assert.Throws<ArgumentOutOfRangeException>(act);
 
             // Assert
-            Assert.Equal("Radius must be over 0. (Parameter 'Radius')", exception.Message);
+            Assert.Equal("Radius equals or less than 0. (Parameter 'Radius')", exception.Message);
         }
 
         [Fact]
-        void CalculateSquare_WithValidRadius_CalculatesCircleSquare()
+        void CalculateSquare_WithValidRadius_ReturnsCircleSquareNumber()
         {
             // Arrange
             var circle = new Circle(1);
