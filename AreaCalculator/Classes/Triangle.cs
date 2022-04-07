@@ -50,7 +50,7 @@ namespace AreaCalculator.Classes
         public double CalculateArea()
         {
             // Найдем полупериметр для вычисления площади треугольника.
-            double p = (_sideA + _sideB + _sideC) / 2;
+            var p = (_sideA + _sideB + _sideC) / 2;
             // Согласно формуле нахождения площади треугольника, произведем необходимые вычисления.
             return Math.Sqrt((p - _sideA) * (p - _sideB) * (p - _sideC) * p);
         }
