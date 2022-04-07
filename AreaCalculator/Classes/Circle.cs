@@ -18,7 +18,7 @@ namespace AreaCalculator.Classes
         public Circle(double radius)
         {
             if (radius <= 0)
-                throw new ArgumentOutOfRangeException("Radius", "Radius equals or less than 0.");
+                throw new ArgumentOutOfRangeException(nameof(radius), "Radius equals or less than 0.");
             else if (Double.IsPositiveInfinity(radius))
                 throw new ArgumentException("Radius is positive infinity.");
             else if (Double.IsNaN(radius))

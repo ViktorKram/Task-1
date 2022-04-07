@@ -36,7 +36,7 @@ namespace AreaCalculatorTests
             ArgumentOutOfRangeException exception = Assert.Throws<ArgumentOutOfRangeException>(act);
 
             // Assert
-            Assert.Equal("Side equals or less than 0. (Parameter 'Side')", exception.Message);
+            Assert.Equal("Side equals or less than 0. (Parameter 'side')", exception.Message);
         }
 
         [Fact]
@@ -47,7 +47,7 @@ namespace AreaCalculatorTests
             ArgumentOutOfRangeException exception = Assert.Throws<ArgumentOutOfRangeException>(act);
 
             // Assert
-            Assert.Equal("Side equals or less than 0. (Parameter 'Side')", exception.Message);
+            Assert.Equal("Side equals or less than 0. (Parameter 'side')", exception.Message);
         }
 
         [Fact]
@@ -58,7 +58,7 @@ namespace AreaCalculatorTests
             ArgumentOutOfRangeException exception = Assert.Throws<ArgumentOutOfRangeException>(act);
 
             // Assert
-            Assert.Equal("Triangle with these sides cannot exist. (Parameter 'Side')", exception.Message);
+            Assert.Equal("Triangle with these sides cannot exist. (Parameter 'side')", exception.Message);
         }
 
         [Fact]

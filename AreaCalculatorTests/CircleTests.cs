@@ -36,7 +36,7 @@ namespace AreaCalculatorTests
             ArgumentOutOfRangeException exception = Assert.Throws<ArgumentOutOfRangeException>(act);
 
             // Assert
-            Assert.Equal("Radius equals or less than 0. (Parameter 'Radius')", exception.Message);
+            Assert.Equal($"Radius equals or less than 0. (Parameter '{exception.ParamName}')", exception.Message);
         }
 
         [Fact]
@@ -47,7 +47,7 @@ namespace AreaCalculatorTests
             ArgumentOutOfRangeException exception = Assert.Throws<ArgumentOutOfRangeException>(act);
 
             // Assert
-            Assert.Equal("Radius equals or less than 0. (Parameter 'Radius')", exception.Message);
+            Assert.Equal($"Radius equals or less than 0. (Parameter '{exception.ParamName}')", exception.Message);
         }
 
         [Fact]
