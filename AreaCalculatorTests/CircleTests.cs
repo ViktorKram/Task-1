@@ -14,7 +14,7 @@ namespace AreaCalculatorTests
             ArgumentException exception = Assert.Throws<ArgumentException>(act);
 
             //Assert
-            Assert.Equal("Radius is positive infinity.", exception.Message);
+            Assert.Equal($"Parameter is positive infinity. (Parameter '{exception.ParamName}')", exception.Message);
         }
 
         [Fact]
@@ -25,7 +25,7 @@ namespace AreaCalculatorTests
             ArgumentException exception = Assert.Throws<ArgumentException>(act);
 
             // Assert
-            Assert.Equal("Radius is NaN.", exception.Message);
+            Assert.Equal($"Parameter is NaN. (Parameter '{exception.ParamName}')", exception.Message);
         }
 
         [Fact]
@@ -36,7 +36,7 @@ namespace AreaCalculatorTests
             ArgumentOutOfRangeException exception = Assert.Throws<ArgumentOutOfRangeException>(act);
 
             // Assert
-            Assert.Equal($"Radius equals or less than 0. (Parameter '{exception.ParamName}')", exception.Message);
+            Assert.Equal($"Parameter equals or less than 0. (Parameter '{exception.ParamName}')", exception.Message);
         }
 
         [Fact]
@@ -47,7 +47,7 @@ namespace AreaCalculatorTests
             ArgumentOutOfRangeException exception = Assert.Throws<ArgumentOutOfRangeException>(act);
 
             // Assert
-            Assert.Equal($"Radius equals or less than 0. (Parameter '{exception.ParamName}')", exception.Message);
+            Assert.Equal($"Parameter equals or less than 0. (Parameter '{exception.ParamName}')", exception.Message);
         }
 
         [Fact]
