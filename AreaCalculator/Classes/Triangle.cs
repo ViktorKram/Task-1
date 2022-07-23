@@ -20,13 +20,13 @@ namespace AreaCalculator.Classes
             if (sideA <= 0 || sideB <= 0 || sideC <= 0)
                 throw new ArgumentOutOfRangeException("side", "Side equals or less than 0.");
 
-            else if (Double.IsPositiveInfinity(sideA) || Double.IsPositiveInfinity(sideB) || Double.IsPositiveInfinity(sideC))
+            if (Double.IsPositiveInfinity(sideA) || Double.IsPositiveInfinity(sideB) || Double.IsPositiveInfinity(sideC))
                 throw new ArgumentException("Side is positive infinity.");
 
-            else if (Double.IsNaN(sideA) || Double.IsNaN(sideB) || Double.IsNaN(sideC))
+            if (Double.IsNaN(sideA) || Double.IsNaN(sideB) || Double.IsNaN(sideC))
                 throw new ArgumentException("Side is NaN.");
 
-            else if (sideA > sideB + sideC || sideB > sideA + sideC || sideC > sideA + sideB)
+            if (sideA > sideB + sideC || sideB > sideA + sideC || sideC > sideA + sideB)
                 throw new ArgumentOutOfRangeException("side", "Triangle with these sides cannot exist.");
 
             _sideA = sideA;

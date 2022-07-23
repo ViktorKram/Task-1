@@ -18,10 +18,10 @@ namespace AreaCalculator.Classes
             if (radius <= 0)
                 throw new ArgumentOutOfRangeException(nameof(radius), "Parameter equals or less than 0.");
 
-            else if (Double.IsPositiveInfinity(radius))
+            if (Double.IsPositiveInfinity(radius))
                 throw new ArgumentException("Parameter is positive infinity.", nameof(radius));
 
-            else if (Double.IsNaN(radius))
+            if (Double.IsNaN(radius))
                 throw new ArgumentException($"Parameter is NaN.", nameof(radius));
 
             _radius = radius;
